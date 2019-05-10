@@ -27,7 +27,7 @@
 		</table>
         <h3>LISTA PACJENTÓW</h3>
         <?php 
-			$polacz = mysqli_connect('localhost','root','','poradnia');
+			$polacz = mysqli_connect('localhost','root','','przychodnia');
 			$zap = "SELECT id, imie, nazwisko, choroba FROM `pacjenci`";
 			$wynik = mysqli_query($polacz,$zap);
 			while ($l=mysqli_fetch_row($wynik)) {
@@ -43,7 +43,17 @@
 		</form>
 </div>
 	<div class="right">
-		<h2>KARTA PACJENTA</h2>
+        <h2>KARTA PACJENTA</h2>
+        <?php
+			$id = $_POST['id'];
+			$polacz = mysqli_connect('localhost','root','','przychodnia');
+			$zap1 = "SELECT imie, nazwisko, leki_przepisane, opis FROM `pacjenci` WHERE id = '$id'";
+			$wynik1 = mysqli_query($polacz,$zap1);
+			while ($l1=mysqli_fetch_row($wynik1)) {
+				echo '<p>Imię i Nazwisko: '.$l1[0].' '.$l1[1].'</p>'.'<p>Przepisane leki: '.$l1[2].'</p>'.'<p>Opis choroby: '.$l1[3].'</p>';
+			}
+			mysqli_close($polacz);
+		?>
 </div>
 	<footer>
 		<p>utworzone przez: Na pewno nie Michał </p>
