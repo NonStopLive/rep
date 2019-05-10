@@ -4,7 +4,7 @@ body, html{
 }
 header{
 	background-color: rgb(48, 27, 94);
-	color: white;
+	color: pink;
 	font-size:120%;
 	text-align: center;
 	height: 80px;
@@ -13,7 +13,7 @@ header{
 	background-color: rgb(127, 118, 158);
 	width: 25%;
 	height: 500px;
-	color: white;
+	color: red;
 	float: left;
 }
 .right{
@@ -26,11 +26,11 @@ header{
 footer{
 	clear: left;
 	background-color: rgb(127, 118, 158);
-	color: white;
+	color:blue;
 	text-align: center;
 	height: 80px;
 }
 table, th, tr{
 	border: solid 1px;
-	border-color: white;
+	border-color:blueviolet;
 }
