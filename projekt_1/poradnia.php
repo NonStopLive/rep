@@ -8,10 +8,10 @@
 <body>
 	<header>
 		<h1>PORADNIA SPECJALISTYCZNA</h1>
-	</header>
-	<nav>
+    </header>
+    <div class="left">
 		<h3>LEKARZE SPECJALIŚCI</h3>
-		<div class="left">
+        <table>
 			<tr>
 				<th colspan="2">Poniedziałek</th>
 			</tr>
@@ -24,7 +24,18 @@
 			<tr>
 				<th>Jan Nowak</th><th>kardiolog</th>
 			</tr>
-		</table>
+        </table>
+        <h3>LISTA PACJENTÓW</h3>
+		<?php 
+			$polacz = mysqli_connect('localhost','root','','przychodnia');
+			$zap = "SELECT id, imie, nazwisko, choroba FROM `pacjenci`";
+			$wynik = mysqli_query($polacz,$zap);
+			while ($l=mysqli_fetch_row($wynik))
+			{
+				echo $l[0].' '.$l[1].' '.$l[2].' '.$l[3].'<br>';
+			}
+			mysqli_close($polacz);
+		?>
         <br><br>
 		<form method="POST" action="pacjent.php">
 			<label>Podaj id: <br>
