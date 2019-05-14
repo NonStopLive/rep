@@ -23,6 +23,7 @@
 </div>
 
 <div class="mid">
+cos dodaje sobie 
 	<h3>PRZYPOMNIENIE O NASTĘPNEJ WIZYCIE</h3>
 
 	<?php
