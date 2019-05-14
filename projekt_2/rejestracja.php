@@ -28,14 +28,14 @@ if(isset($_POST['rejestruj'])) {
         $zaznacz=$_POST['zaznacz'];
 		$polaczenie=mysqli_connect('localhost','root','','forum');
 		echo "Konto $nick zostało zarejestrowane na forum hobbystycznym";
-			if (empty($zaznacz) || empty($nick) || empty($zawod) || empty($zainteresowania)) {
+			if (empty($zaznacz) && empty($nick) && empty($zawod) && empty($zainteresowania)) {
 				echo "Nie podano danych lub nie zaznaczono płci";
 			}
 			else if (isset($_POST['zaznacz'])) {
 				$sql="INSERT INTO uzytkownicy VALUES(NULL,'$nick','$zainteresowania','$zawod','$zaznacz')";
 				$wynik=mysqli_query($polaczenie,$sql);
 			}	
-			if (empty($login) || empty($haslo)) {
+			if (empty($login) && empty($haslo)) {
 				echo "Nie podano danych logowania";
 			}
 			else if (isset($_POST['login']) && isset($_POST['haslo'])) {
