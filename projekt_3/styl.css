@@ -1,0 +1,21 @@
+.baner{
+    background-color: #875080;
+    text-align: center;
+    height: 50px;
+}
+.left{
+    background-color: #C2A6BF;
+    height: 300px;
+    width: 75%;
+    float: left;
+}
+.right{
+    background-color: #A1759C;
+    height: 300px;
+    width: 25%;
+    float: left;
+}
+.stopka{
+    background-color: #875080;
+    text-align: right;
+}
