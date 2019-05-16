@@ -1,0 +1,4 @@
+Zapytanie 1: SELECT `uczen`.`nazwisko`, `uczen`.`PESEL` FROM `uczen`
+Zapytanie 2: SELECT `uczen`.`imie`, `uczen`.`nazwisko` FROM `uczen` WHERE `uczen`.`id`=1
+Zapytanie 3: SELECT MAX(`ocena`.`ocena`) FROM `ocena` INNER JOIN `uczen` On `uczen`.`id`= `ocena`.`uczen_id` Where `uczen`.`id` = 1 AND `ocena`.`przedmiot_id`= 4  
+Zapytanie 4: SELECT COUNT(`ocena`.`ocena`) FROM `ocena` INNER JOIN `uczen` On `uczen`.`id`= `ocena`.`uczen_id` Where `uczen`.`id` = 1 AND `ocena`.`przedmiot_id`= 4 
