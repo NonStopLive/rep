@@ -31,6 +31,9 @@ img.koszyk{
     height: 50px;
     margin-right: 1%;
 }
+img.koszyk:hover{
+    filter: brightness(0.3);
+}
 p{
     color: white;
     text-align: center;
