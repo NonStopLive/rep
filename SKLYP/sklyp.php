@@ -1,13 +1,6 @@
-<!DOCTYPE html>
-
-<html>
-
 <?php
 include('head.php');
-?>
-
-<body>
-
+			 ?>
 <div class="baner">
 
 <img src="logo.png">
@@ -21,7 +14,15 @@ include('head.php');
 
 </div>
 <div class="karton">
+<?php 
 
+$zap = "SELECT `nazwa`.`ilosc`, `cena`.`opis` FROM `produkt`";
+$wynik = mysqli_query($polacz,$zap);
+while ($l=mysqli_fetch_row($wynik)) {
+	echo $l[0].' '.$l[1];
+}
+mysqli_close($polacz);
+?>
 
 </div>
 
