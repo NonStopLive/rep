@@ -8,5 +8,7 @@
 <link rel="stylesheet" type="text/css" href="css.css?v=<?php echo time();?>">
 <?php
     $polacz = mysqli_connect('localhost','root','','sklyp');
+    mysqli_query($polacz,"set names utf8");
     ?>
+
 </head>
