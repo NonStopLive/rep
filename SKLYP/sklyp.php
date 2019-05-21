@@ -10,11 +10,13 @@ include('head.php');
 
 <div class="baner">
 
-<script async src="zegarek.js"></script>
-
 <img src="logo.png">
 <br>
 <img src="logo2.png">
+
+<?php
+include('zegarek.js');
+?>
 
 </div>
 <div class="koszyk">

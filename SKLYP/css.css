@@ -39,3 +39,7 @@ p{
     text-align: center;
     margin: 0px;
 }
+.zeg{
+    position: absolute;
+    float: left;
+}

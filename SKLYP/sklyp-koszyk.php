@@ -14,6 +14,10 @@ include('head.php');
 <br>
 <img src="logo2.png">
 
+<?php
+include('zegarek.js');
+?>
+
 </div>
 <div class="koszyk">
 
