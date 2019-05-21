@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Czas generowania: 17 Maj 2019, 13:07
+-- Czas generowania: 21 Maj 2019, 14:51
 -- Wersja serwera: 10.1.38-MariaDB
 -- Wersja PHP: 7.3.3
 
@@ -87,6 +87,13 @@ CREATE TABLE `produkt` (
   `obrazek` text COLLATE utf8_polish_ci NOT NULL,
   `opis` text COLLATE utf8_polish_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
+
+--
+-- Zrzut danych tabeli `produkt`
+--
+
+INSERT INTO `produkt` (`id`, `referencja`, `nazwa`, `cena`, `ilosc`, `obrazek`, `opis`) VALUES
+(2, '0001', 'Serce', 10, 10, 'https://www.google.com/search?biw=1280&bih=913&tbm=isch&sa=1&ei=KM_jXNWlCsq36AT_8omoDg&q=human+heart+png&oq=human+heart+&gs_l=img.1.1.0l10.5927.9574..25818...0.0..0.85.512.7......0....1..gws-wiz-img.......0i67.NKTGyISDSV4#imgrc=ckD6kQ6hfg75fM:', 'Serce ludzkie, smaczne i pożywne.');
 
 -- --------------------------------------------------------
 
@@ -176,7 +183,7 @@ ALTER TABLE `koszyk`
 -- AUTO_INCREMENT dla tabeli `produkt`
 --
 ALTER TABLE `produkt`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT dla tabeli `zamowienie`
@@ -212,12 +219,6 @@ ALTER TABLE `koszyk`
 --
 ALTER TABLE `platnosci`
   ADD CONSTRAINT `platnosci_ibfk_1` FOREIGN KEY (`id`) REFERENCES `zamowienie` (`idPlatnosci`);
-
---
--- Ograniczenia dla tabeli `produkt`
---
-ALTER TABLE `produkt`
-  ADD CONSTRAINT `produkt_ibfk_1` FOREIGN KEY (`id`) REFERENCES `koszyk` (`idProdukt`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
