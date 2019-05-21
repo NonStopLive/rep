@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 
 <html>
-<head>
-   
-<meta charset="utf-8">
-<title>SKLYP - 100MilowyLas</title>
-<link rel="stylesheet" type="text/css" href="css.css">
 
-</head>
+<?php
+include('head.php');
+?>
+
 <body>
 
 <div class="baner">
@@ -26,10 +24,10 @@
 
 
 </div>
-<div class="stopka">
 
-<p>© Wszelkie Prawa Zastrzeżone © Designed by. Prosiaczek&Pucahtek&9 ©</p>
+<?php
+include('stopka.php');
+?>
 
-</div>
 </body>
 </html>
