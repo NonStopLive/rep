@@ -19,7 +19,7 @@ include('head.php');
 $zap = "SELECT `nazwa`,`ilosc`, `cena`,`opis` FROM `produkt`";
  $wynik = mysqli_query($polacz,$zap);
 while ($l=mysqli_fetch_row($wynik)) {
-	echo $l[0].' '.$l[1];
+	echo $l[0].'</br> '.'Cena: '.$l[1].' ETC </br>'.'Ilość: '.$l[2].'</br> '.$l[3].' ';
 }
 mysqli_close($polacz); 
 ?>
