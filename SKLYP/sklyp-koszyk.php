@@ -17,7 +17,7 @@ include('head.php');
 </div>
 <div class="koszyk">
 
-<img src="wracamy.png"> <a href="sklyp.html"> <img class="koszyk" src="strzałka.png"> </a>
+<img src="wracamy.png"> <a href="sklyp.php"> <img class="koszyk" src="strzałka.png"> </a>
 
 </div>
 <div class="karton">

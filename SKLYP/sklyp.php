@@ -10,6 +10,8 @@ include('head.php');
 
 <div class="baner">
 
+<script async src="zegarek.js"></script>
+
 <img src="logo.png">
 <br>
 <img src="logo2.png">
@@ -17,7 +19,7 @@ include('head.php');
 </div>
 <div class="koszyk">
 
-<img src="textkoszyk.png"> <a href="sklyp-koszyk.html"> <img class="koszyk" src="koszyk.png"> </a>
+<img src="textkoszyk.png"> <a href="sklyp-koszyk.php"> <img class="koszyk" src="koszyk.png"> </a>
 
 </div>
 <div class="karton">
