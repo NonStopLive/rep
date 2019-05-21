@@ -17,11 +17,11 @@ include('head.php');
 <?php 
 
 $zap = "SELECT `nazwa`.`ilosc`, `cena`.`opis` FROM `produkt`";
-$wynik = mysqli_query($polacz,$zap);
+ $wynik = mysqli_query($polacz,$zap);
 while ($l=mysqli_fetch_row($wynik)) {
 	echo $l[0].' '.$l[1];
 }
-mysqli_close($polacz);
+mysqli_close($polacz); 
 ?>
 
 </div>
