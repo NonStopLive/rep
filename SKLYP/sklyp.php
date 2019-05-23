@@ -18,7 +18,7 @@ include('head.php');
 	<div class="produkt" style="padding: 0;">
 
 <?php 
-$zap = "SELECT `referencja`,`nazwa`,`ilosc`,`cena`,`opis`, `obrazek` FROM `produkt` LIMIT 5";
+$zap = "SELECT `referencja`,`nazwa`,`ilosc`,`cena`,`opis`,`obrazek` FROM `produkt` LIMIT 6";
  $wynik = mysqli_query($polacz,$zap);
 while ($l=mysqli_fetch_row($wynik)) {
 	?>
@@ -26,16 +26,12 @@ while ($l=mysqli_fetch_row($wynik)) {
 	<img class="img" src="<?php echo $l[5]; ?>" alt="n">
 </a>
 <?php
-	echo ' </br>'.$l[1].'</br> '.'Cena: '.$l[2].' ETC </br>'.'Ilość: '.$l[3].'</br> ';
+	echo ' </br>'.$l[1].'</br> '.'Cena: '.$l[2].' ETC </br>'.'Ilość: '.$l[3].'</br> '.'<button type="button">KUP</button>';
 	echo substr($l[4],0,32);
 	echo (strlen($l[4]) > 32) ? "..." : "".' ';
 }
 ?>
-<button type="button">KUP</button>
 </div>
-
- 
-<button type="button">KUP</button>
 </div>
 </div>
 </div>
