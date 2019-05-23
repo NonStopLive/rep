@@ -15,60 +15,28 @@ include('head.php');
 </div>
 <div class="karton">
 	<div class="produkty">
-	<div class="produkt">
-	<a href="" class="img">
-    	<img class="img" src="wątróbka.png" alt="n">
-	</a>
+	<div class="produkt" style="padding: 0;">
+
 <?php 
-$zap = "SELECT `nazwa`,`ilosc`, `cena`,`opis` FROM `produkt`";
+$zap = "SELECT `referencja`,`nazwa`,`ilosc`,`cena`,`opis`, `obrazek` FROM `produkt` LIMIT 5";
  $wynik = mysqli_query($polacz,$zap);
 while ($l=mysqli_fetch_row($wynik)) {
-	echo ' </br>'.$l[0].'</br> '.'Cena: '.$l[1].' ETC </br>'.'Ilość: '.$l[2].'</br> '.$l[3].' ';
+	?>
+	<a href="" class="img">
+	<img class="img" src="<?php echo $l[5]; ?>" alt="n">
+</a>
+<?php
+	echo ' </br>'.$l[1].'</br> '.'Cena: '.$l[2].' ETC </br>'.'Ilość: '.$l[3].'</br> ';
+	echo substr($l[4],0,32);
+	echo (strlen($l[4]) > 32) ? "..." : "".' ';
 }
-?>
-<button type="button">KUP</button>
-</div>
-<div class="produkt">
-	<a href="" class="img">
-    	<img class="img" src="wątróbka.png" alt="n">
-	</a>
-<?php 
-$zap = "SELECT `nazwa`,`ilosc`, `cena`,`opis` FROM `produkt`";
- $wynik = mysqli_query($polacz,$zap);
-while ($l=mysqli_fetch_row($wynik)) {
-	echo ' </br>'.$l[0].'</br> '.'Cena: '.$l[1].' ETC </br>'.'Ilość: '.$l[2].'</br> '.$l[3].' ';
-} 
-?>
-<button type="button">KUP</button>
-</div>
-<div class="produkt" style="padding: 0;">
-	<a href="" class="img">
-    	<img class="img" src="wątróbka.png" alt="n">
-	</a>
-<?php 
-$zap = "SELECT `nazwa`,`ilosc`, `cena`,`opis` FROM `produkt`";
- $wynik = mysqli_query($polacz,$zap);
-while ($l=mysqli_fetch_row($wynik)) {
-	echo ' </br>'.$l[0].'</br> '.'Cena: '.$l[1].' ETC </br>'.'Ilość: '.$l[2].'</br> '.$l[3].' ';
-}
-?>
-<button type="button">KUP</button>
-</div>
-<div class="produkt" style="padding: 0;">
-	<a href="" class="img">
-    	<img class="img" src="wątróbka.png" alt="n">
-	</a>
-<?php 
-$zap = "SELECT `nazwa`,`ilosc`, `cena`,`opis` FROM `produkt`";
- $wynik = mysqli_query($polacz,$zap);
-while ($l=mysqli_fetch_row($wynik)) {
-	echo ' </br>'.$l[0].'</br> '.'Cena: '.$l[1].' ETC </br>'.'Ilość: '.$l[2].'</br> '.$l[3].' ';
-}
-mysqli_close($polacz); 
 ?>
 <button type="button">KUP</button>
 </div>
 
+ 
+<button type="button">KUP</button>
+</div>
 </div>
 </div>
 
