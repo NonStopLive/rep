@@ -81,4 +81,6 @@ button {
     margin-right: 40px;
     margin-bottom: 30px;
 }
-
+.produkty::-webkit-scrollbar {
+    display: none;
+}
