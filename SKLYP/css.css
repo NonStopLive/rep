@@ -72,7 +72,9 @@ p{
     display: block;
 	width: 700px; 
 	height: 650px; 
-    overflow-y: scroll; }
+    overflow-y: scroll; 
+    background-image: url(tloz.png);
+}
     
 button {
     float: right;
