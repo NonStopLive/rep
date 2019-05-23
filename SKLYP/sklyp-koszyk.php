@@ -57,6 +57,10 @@ include('head.php');
         </tbody>
     </table>
 
+<br>
+<a href="zamowienie.php"> <img class="zrealizuj" src="serduszko.png"> </a> <img class="zrealizuj" src="zrealizuj.png">
+
+
 </div>
 
 <?php
