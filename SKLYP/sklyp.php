@@ -1,4 +1,6 @@
 <?php
+//https://bitbucket.org/0Pandzioszek0/projekt_3ti/src/master/p4/ 
+// link do repo sary z dzialajacym koszykiem 
 include('head.php');
 			 ?>
 <div class="baner">
