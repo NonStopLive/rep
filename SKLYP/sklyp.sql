@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Czas generowania: 23 Maj 2019, 10:56
+-- Czas generowania: 23 Maj 2019, 13:27
 -- Wersja serwera: 10.1.40-MariaDB
 -- Wersja PHP: 7.3.5
 
@@ -33,6 +33,15 @@ CREATE TABLE `dostawa` (
   `nazwa` text COLLATE utf8_polish_ci NOT NULL,
   `koszt` float NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
+
+--
+-- Zrzut danych tabeli `dostawa`
+--
+
+INSERT INTO `dostawa` (`id`, `nazwa`, `koszt`) VALUES
+(12, 'Kurier Tomuś', 2),
+(13, 'Paczkomaty', 1),
+(14, 'Punkty Żabka, Orlen itp.', 1);
 
 -- --------------------------------------------------------
 
@@ -169,7 +178,7 @@ ALTER TABLE `zamowienie`
 -- AUTO_INCREMENT dla tabeli `dostawa`
 --
 ALTER TABLE `dostawa`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT dla tabeli `klient`
@@ -198,12 +207,6 @@ ALTER TABLE `zamowienie`
 --
 -- Ograniczenia dla zrzutów tabel
 --
-
---
--- Ograniczenia dla tabeli `dostawa`
---
-ALTER TABLE `dostawa`
-  ADD CONSTRAINT `dostawa_ibfk_1` FOREIGN KEY (`id`) REFERENCES `zamowienie` (`idDostawa`);
 
 --
 -- Ograniczenia dla tabeli `klient`
