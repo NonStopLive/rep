@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Czas generowania: 23 Maj 2019, 13:27
--- Wersja serwera: 10.1.40-MariaDB
--- Wersja PHP: 7.3.5
+-- Czas generowania: 23 Maj 2019, 13:46
+-- Wersja serwera: 10.1.38-MariaDB
+-- Wersja PHP: 7.3.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -102,11 +102,11 @@ CREATE TABLE `produkt` (
 --
 
 INSERT INTO `produkt` (`id`, `referencja`, `nazwa`, `cena`, `ilosc`, `obrazek`, `opis`) VALUES
-(2, '0001', 'Serce', 10, 10, 'https://www.google.com/search?biw=1280&bih=913&tbm=isch&sa=1&ei=KM_jXNWlCsq36AT_8omoDg&q=human+heart+png&oq=human+heart+&gs_l=img.1.1.0l10.5927.9574..25818...0.0..0.85.512.7......0....1..gws-wiz-img.......0i67.NKTGyISDSV4#imgrc=ckD6kQ6hfg75fM:', 'Serce ludzkie, smaczne i pożywne.'),
-(3, '0002', 'Mózg', 8, 10, '', 'Inteligentny umysł młodego posiadacza.\r\nGwarantowane 200 IQ.\r\n'),
-(4, '0003', 'Wątróbka ', 6, 10, '', 'Używana tylko w weekendy. \r\nCzyszczona regularnie za pomocą wysokiej jakości napojów alkoholowych.\r\nGwarantujemy niezawodną strawność oraz szybką regeneracje.'),
-(5, '0004', 'Płuca', 7, 10, '', 'Nie palone.\r\nGwarancja głębokiego wdechu.'),
-(6, '0005', 'Nerki', 4, 10, '', 'Odkamienione, sprawne \r\n');
+(2, '0001', 'Serce', 10, 10, 'https://vignette.wikia.nocookie.net/elderscrolls/images/0/0b/Ludzkie_serce_%28Skyrim%29.png/revision/latest?cb=20180201185644&path-prefix=pl\r\n', 'Serce ludzkie, smaczne i pożywne.'),
+(3, '0002', 'Mózg', 8, 10, 'http://www.kojs.com.pl/images_mce/Produkty/wieprzowina/produkty_poubojowe/mozg_wieprzowy.png', 'Inteligentny umysł młodego posiadacza.\r\nGwarantowane 200 IQ.\r\n'),
+(4, '0003', 'Wątróbka ', 6, 10, 'https://www.eurostemcell.org/sites/default/files/inline-images/6077442448_a6e40ce017_o.png', 'Używana tylko w weekendy. \r\nCzyszczona regularnie za pomocą wysokiej jakości napojów alkoholowych.\r\nGwarantujemy niezawodną strawność oraz szybką regeneracje.'),
+(5, '0004', 'Płuca', 7, 10, 'http://www.kojs.com.pl/images_mce/Produkty/wolowina/osrodki_wolowe/pluca_wolowe.png', 'Nie palone.\r\nGwarancja głębokiego wdechu.'),
+(6, '0005', 'Nerki', 4, 10, 'http://rzeczo.pl/wp-content/uploads/2017/12/kidney-147499_1280.png', 'Odkamienione, sprawne \r\n');
 
 -- --------------------------------------------------------
 
