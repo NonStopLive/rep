@@ -26,6 +26,7 @@ while ($l=mysqli_fetch_row($wynik)) {
 	echo ' </br>'.$l[0].'</br> '.'Cena: '.$l[1].' ETC </br>'.'Ilość: '.$l[2].'</br> '.$l[3].' ';
 }
 ?>
+<button type="button">KUP</button>
 </div>
 <div class="produkt">
 	<a href="" class="img">
@@ -38,6 +39,21 @@ while ($l=mysqli_fetch_row($wynik)) {
 	echo ' </br>'.$l[0].'</br> '.'Cena: '.$l[1].' ETC </br>'.'Ilość: '.$l[2].'</br> '.$l[3].' ';
 } 
 ?>
+<button type="button">KUP</button>
+</div>
+<div class="produkt" style="padding: 0;">
+	<a href="" class="img">
+    	<img class="img" src="wątróbka.png" alt="n">
+	</a>
+<?php 
+$zap = "SELECT `nazwa`,`ilosc`, `cena`,`opis` FROM `produkt`";
+ $wynik = mysqli_query($polacz,$zap);
+while ($l=mysqli_fetch_row($wynik)) {
+	echo ' </br>'.$l[0].'</br> '.'Cena: '.$l[1].' ETC </br>'.'Ilość: '.$l[2].'</br> '.$l[3].' ';
+}
+?>
+<button type="button">KUP</button>
+</div>
 <div class="produkt" style="padding: 0;">
 	<a href="" class="img">
     	<img class="img" src="wątróbka.png" alt="n">
@@ -50,8 +66,9 @@ while ($l=mysqli_fetch_row($wynik)) {
 }
 mysqli_close($polacz); 
 ?>
+<button type="button">KUP</button>
 </div>
-</div>
+
 </div>
 </div>
 
