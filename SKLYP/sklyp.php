@@ -17,7 +17,7 @@ include('head.php');
 	<div class="produkty">
 	<div class="produkt">
 	<a href="" class="img">
-    	<img class="img" src="wątróbka.png" alt="n">
+    	<img class="img" src="serce.png" alt="n">
 	</a>
 <?php 
 $zap = "SELECT `nazwa`,`ilosc`, `cena`,`opis` FROM `produkt`";
