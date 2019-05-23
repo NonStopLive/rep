@@ -73,7 +73,10 @@ p{
 	width: 700px; 
 	height: 650px; 
     overflow-y: scroll; 
-    background-image: url(tloz.png);
+    background-image: url(tloz1.png);
+    background-size: contain;
+    background-position: top right;
+    background-repeat: no-repeat;
 }
     
 button {
