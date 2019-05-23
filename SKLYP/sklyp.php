@@ -4,12 +4,12 @@
 include('head.php');
 
 if(isset($_POST['kup'])) {
-    $_SESSION['koszyk'][] = [
+    $_SESSION['sklyp-koszyk'][] = [
         'id' => $_POST['id_produkt'],
         'ilosc' => $_POST['ilosc']
     ]; 
 }
-print_r($_SESSION['koszyk']);
+//print_r($_SESSION['sklyp-koszyk']);
 			 ?>
 <div class="baner">
 
