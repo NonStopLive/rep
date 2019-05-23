@@ -77,9 +77,13 @@ p{
 }
     
 button {
+    width: 40px;
+    height: 30px;
+    border: 0;
     float: right;
     margin-right: 40px;
-    margin-bottom: 30px;
+    margin-bottom: 60px;
+    background: rgb(12, 173, 75);
 }
 .produkty::-webkit-scrollbar {
     display: none;
