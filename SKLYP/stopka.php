@@ -1,5 +1,5 @@
 <div class="stopka">
 
-<p>© Wszelkie Prawa Zastrzeżone © Designed by. Prosiaczek&Pucahtek&9 ©</p>
+<p>© Wszelkie Prawa Zastrzeżone © Designed by. Prosiaczek&Puchatek&9 ©</p>
 
 </div>
