@@ -20,7 +20,7 @@ if(isset($_GET['remove'])) {
             
             
             $sql = "SELECT cena FROM produkt WHERE id = ".$total_price['id'];
-            $result = mysqli_query($poloncz,$sql);
+            $result = mysqli_query($polacz,$sql);
             $getPrice = mysqli_fetch_array($result);
             
             if($total_price['ilosc'] > 1) { 
@@ -75,7 +75,7 @@ if(isset($_GET['remove'])) {
             }  else {
             foreach($_SESSION['koszyk'] as $key => $koszyk) { 
                 $getProduct = "SELECT * FROM produkt WHERE id = ".$koszyk['id']."";
-                $result = mysqli_query($poloncz,$getProduct);
+                $result = mysqli_query($polacz,$getProduct);
                 $product = mysqli_fetch_array($result);
             ?>
             <tr>
@@ -83,7 +83,7 @@ if(isset($_GET['remove'])) {
                 <td><?php echo $product['nazwa']; ?></td>
                 <td><?php echo $koszyk['ilosc']; ?></td>
                 <td><?php echo $product['cena']; ?></td>
-                <td><a href="koszyk.php?remove=<?php echo $key; ?>&id_product=<?php echo $koszyk['id']?>">Usun</a></td>
+                <td><a href="sklyp-koszyk.php?remove=<?php echo $key; ?>&id_product=<?php echo $koszyk['id']?>">Usun</a></td>
             </tr>
             <?php
             }

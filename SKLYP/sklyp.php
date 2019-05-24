@@ -5,12 +5,13 @@ include('head.php');
 
 
 if(isset($_POST['kup'])) {
+	 
     $_SESSION['koszyk'][] = [
         'id' => $_POST['id_produkt'],
         'ilosc' => $_POST['ilosc']
     ]; 
 }
-//print_r($_SESSION['sklyp-koszyk']);
+ //print_r($_SESSION['koszyk']);
 			 ?>
 <div class="baner">
 
@@ -29,18 +30,21 @@ if(isset($_POST['kup'])) {
 	<div class="produkt" style="padding: 0;">
 
 <?php 
-$zap = "SELECT `referencja`,`nazwa`,`ilosc`,`cena`,`opis`,`obrazek` FROM `produkt` LIMIT 6";
+$zap = "SELECT `id`, `referencja`,`nazwa`,`ilosc`,`cena`,`opis`,`obrazek` FROM `produkt` LIMIT 6";
  $wynik = mysqli_query($polacz,$zap);
-while ($l=mysqli_fetch_row($wynik)) {
+while ($l=mysqli_fetch_array($wynik)) {
 	?>
 	<a href="" class="img">
-	<img class="img" src="<?php echo $l[5]; ?>" alt="n">
+	<img class="img" src="<?php echo $l['obrazek']; ?>" alt="n">
 </a>
-
+<form method="POST">
 <?php
-	echo ' </br>'.$l[1].'</br> '.'Cena: '.$l[2].' ETC </br>'.'Ilość: '.$l[3].'</br> '.'<input type="hidden" name="id" value="id" ><button type="submit">KUP</button>';
-	echo substr($l[4],0,32);
-	echo (strlen($l[4]) > 32) ? "..." : "".' ';
+	echo ' </br>'.$l['nazwa'].'</br> '.'Cena: '.$l['cena'].' ETC </br>'.'Ilość: '.$l['ilosc'].'</br> '.' <input type="hidden" name="ilosc" value="1"> <input type="hidden" name="id_produkt" value='.$l['id'].' ><button name="kup"  type="submit">KUP</button>';
+	echo substr($l['opis'],0,32);
+	echo (strlen($l['opis']) > 32) ? "..." : "".' ';
+	?>
+	</form>
+	<?php
 }
 ?>
 

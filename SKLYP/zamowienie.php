@@ -20,6 +20,7 @@ include('head.php');
 <img class="koszyknapis" src="koszyknapis.png"> <a href="sklyp-koszyk.php"> <img class="koszyk" src="strzałka.png"> </a>
 <br>
 
+<img class="koszyknapis" src="zrealizowane.png">
 
 </div>
 <div class="karton">
