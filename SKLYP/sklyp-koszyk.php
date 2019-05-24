@@ -39,8 +39,8 @@ if(isset($_GET['remove'])) {
             }
              
         }
-    echo "IDS ".$idsProduct;
-    echo "Qtys ".$qtysProduct;
+   // echo "IDS ".$idsProduct;
+   // echo "Qtys ".$qtysProduct;
 ?>
 
 <body>
