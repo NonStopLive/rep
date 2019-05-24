@@ -58,6 +58,7 @@ if(isset($_GET['remove'])) {
 
 </div>
 <div class="karton">
+<div class="produkty">
 <table class="table">
         <thead>
             <th>#</th>
@@ -92,7 +93,7 @@ if(isset($_GET['remove'])) {
             
         </tbody>
     </table>
-
+</div>
 <br>
 <a href="zamowienie.php"> <img class="zrealizuj" src="serduszko.png"> </a> <img class="zrealizuj" src="zrealizuj.png">
 
