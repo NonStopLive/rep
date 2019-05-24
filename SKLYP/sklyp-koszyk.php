@@ -4,6 +4,43 @@
 
 <?php
 include('head.php');
+
+if(isset($_GET['remove'])) {
+    unset($_SESSION['koszyk'][$_GET['remove']]);
+    }
+        $conditons_totalPrice = '';
+    
+        $getTotal = 0;
+        
+        $idsProduct = '';
+        $qtysProduct = '';
+    
+        $separator = ',';
+        foreach($_SESSION['koszyk'] as $key => $total_price) {
+            
+            
+            $sql = "SELECT cena FROM produkt WHERE id = ".$total_price['id'];
+            $result = mysqli_query($poloncz,$sql);
+            $getPrice = mysqli_fetch_array($result);
+            
+            if($total_price['ilosc'] > 1) { 
+                $ilosc = $total_price['ilosc'];
+            } else { 
+                $ilosc = 1;
+            }
+             $getTotal += $getPrice['cena']*$ilosc;
+    
+             if($key < count($_SESSION['koszyk'])) {
+             $idsProduct .= $total_price['id'].$separator;
+                $qtysProduct .= $total_price['ilosc'].$separator;
+            } else {
+                $idsProduct .= $total_price['id'];
+                $qtysProduct .= $total_price['ilosc'];
+            }
+             
+        }
+    echo "IDS ".$idsProduct;
+    echo "Qtys ".$qtysProduct;
 ?>
 
 <body>
@@ -27,14 +64,13 @@ include('head.php');
             <th>Produkt</th>
             <th>Ilość</th>
             <th>Cena</th>
-            <th>Opcje</th>
 
         </thead>
         <tbody>
-            <?php 
+        <?php 
             if(count($_SESSION['koszyk']) == 0)  {
                 ?>
-                Brak produktów w koszyku
+                Brak produktow w koszyku
                 <?php
             }  else {
             foreach($_SESSION['koszyk'] as $key => $koszyk) { 
@@ -43,7 +79,7 @@ include('head.php');
                 $product = mysqli_fetch_array($result);
             ?>
             <tr>
-                <td><?php echo $key +1;?></td>
+                <td><?php echo "<img src='".$product['obrazek']."' alt='' style='width:64px;' />";?></td>
                 <td><?php echo $product['nazwa']; ?></td>
                 <td><?php echo $koszyk['ilosc']; ?></td>
                 <td><?php echo $product['cena']; ?></td>
