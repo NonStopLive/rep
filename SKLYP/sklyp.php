@@ -36,13 +36,14 @@ while ($l=mysqli_fetch_row($wynik)) {
 	<a href="" class="img">
 	<img class="img" src="<?php echo $l[5]; ?>" alt="n">
 </a>
+
 <?php
 	echo ' </br>'.$l[1].'</br> '.'Cena: '.$l[2].' ETC </br>'.'Ilość: '.$l[3].'</br> '.'<input type="hidden" name="id" value="id" ><button type="submit">KUP</button>';
 	echo substr($l[4],0,32);
 	echo (strlen($l[4]) > 32) ? "..." : "".' ';
 }
 ?>
-</div>
+
 </div>
 </div>
 </div>
