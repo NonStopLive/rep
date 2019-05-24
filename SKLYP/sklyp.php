@@ -34,9 +34,13 @@ $zap = "SELECT `id`, `referencja`,`nazwa`,`ilosc`,`cena`,`opis`,`obrazek` FROM `
  $wynik = mysqli_query($polacz,$zap);
 while ($l=mysqli_fetch_array($wynik)) {
 	?>
+	<div class="kontener">
+	<div class="obrazekimg">
 	<a href="" class="img">
 	<img class="img" src="<?php echo $l['obrazek']; ?>" alt="n">
 </a>
+	</div>
+	<div class="opis">
 <form method="POST">
 <?php
 	echo ' </br>'.$l['nazwa'].'</br> '.'Cena: '.$l['cena'].' ETC </br>'.'Ilość: '.$l['ilosc'].'</br> '.' <input type="hidden" name="ilosc" value="1"> <input type="hidden" name="id_produkt" value='.$l['id'].' ><button name="kup"  type="submit">KUP</button>';
@@ -44,6 +48,8 @@ while ($l=mysqli_fetch_array($wynik)) {
 	echo (strlen($l['opis']) > 32) ? "..." : "".' ';
 	?>
 	</form>
+	</div>
+	</div>
 	<?php
 }
 ?>
