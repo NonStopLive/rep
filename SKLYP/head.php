@@ -2,7 +2,9 @@
 
 <html>
 <head>
-   
+<!-- 
+Ok widzę że robisz porządki w kodzie, teraz będzie kod "elastyczniejszy" pod reszte widoków
+-->
 <meta charset="utf-8">
 <title>SKLYP - 100MilowyLas</title>
 <link rel="stylesheet" type="text/css" href="css.css?v=<?php echo time();?>">
