@@ -5,6 +5,39 @@
 <?php
 include('head.php');
 $checked='checked';
+
+/**
+
+Dobra panie dzieju,
+w widoku zamowienia wez przy składaniu zamowienia uwzględnij checkboxy wg schematu: 
+(uwaga cenne info)
+
+DB: 
+dostawa
+|id |   nazwa   |   koszt
+--------------------------
+|1  |  Kurier InPost    | 10.00
+|2  |  Kurier DPD       | 15.00
+|3  |  Poczta Polska    | 9.00
+|4  |  Odbior osobisty  | 0.00
+
+<input type="checkbox" name="dostawa" value="$r['id']" /> Kurier InPost
+<input type="checkbox" name="dostawa" value="$r['id']" /> Kurier DPD
+<input type="checkbox" name="dostawa" value="$r['id']" /> Poczta Polska
+<input type="checkbox" name="dostawa" value="$r['id']" /> Odbior osobisty
+
+
+$sql = "SELECT * FROM dostawcy WHERE id = ".$_POST['dostawa']."";
+
+$resutat = mysqli_result($polaczenie,$sql);
+
+$dostawa_koszt = mysqli_fetch_array($resutat);
+
+$dostawa = $dostawa_koszt['koszt'];
+
+$cena_ostateczna = $totalPrice + $dostawa;
+
+*/
 ?>
 
 <body>
