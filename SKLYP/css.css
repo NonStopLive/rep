@@ -134,3 +134,17 @@ button {
 .table td, .table th {
     padding: 10px;
 }
+.kup{
+    float: right;
+    text-align: right;
+}
+img.kup{
+    margin-top: 540px;
+}
+img.zrealizowano{
+    text-align: center;
+    float: initial;
+    margin-left: 280px;
+    margin-top: 210px;
+    width: 60%;
+}

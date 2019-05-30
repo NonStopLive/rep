@@ -65,6 +65,12 @@ $cena_ostateczna = $totalPrice + $dostawa;
 echo $getTotal;
 ?>
 
+<div class="kup">
+
+<a href="zrealizowano.php"> <img class="kup" src="kup.png">  </a>
+
+</div>
+
 </div>
 
 <?php
