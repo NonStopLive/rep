@@ -5,7 +5,7 @@
 <?php
 include('head.php');
 $checked='checked';
-
+$cena_ostateczna ='';
 /**
 
 Dobra panie dzieju,
@@ -21,10 +21,7 @@ dostawa
 |3  |  Poczta Polska    | 9.00
 |4  |  Odbior osobisty  | 0.00
 
-<input type="checkbox" name="dostawa" value="$r['id']" /> Kurier InPost
-<input type="checkbox" name="dostawa" value="$r['id']" /> Kurier DPD
-<input type="checkbox" name="dostawa" value="$r['id']" /> Poczta Polska
-<input type="checkbox" name="dostawa" value="$r['id']" /> Odbior osobisty
+
 
 
 $sql = "SELECT * FROM dostawcy WHERE id = ".$_POST['dostawa']."";
@@ -57,12 +54,27 @@ $cena_ostateczna = $totalPrice + $dostawa;
 </div>
 <div class="karton">
 
-<input type="checkbox" name="Kurier Tomek" <?php if ($checked == '1') $getTotal+2;?>/><?php echo 'Kurier Tomek'.'</br>'?> 
+<?php 
+if(isset($_POST['dostawa'])) {
+$sql = "SELECT * FROM dostawy WHERE id = ".$_POST['dostawa']."";
 
-<input type="checkbox" name="Paczkomat" <?php if ($checked == '1') $getTotal+1;?> /><?php echo 'Paczkomat'.'</br>'?> 
-<input type="checkbox" name="Punkt" <?php if ($checked== '1') $getTotal+1;?> /><?php echo 'Punkt'.'</br>'?> 
+$resultat = mysqli_result($polaczenie,$sql);
+
+$dostawa_koszt = mysqli_fetch_array($resultat);
+
+$dostawa = $dostawa_koszt['koszt'];
+
+$cena_ostateczna = $getTotal + $dostawa;
+}
+?>
+<input type="checkbox" name="dostawa" value="$r['12']" /> Kurier Tomek <?php echo '</br>' ?>
+<input type="checkbox" name="dostawa" value="$r['13']" /> Punkt <?php echo '</br>' ?>
+<input type="checkbox" name="dostawa" value="$r['14']" /> Poczta Polska <?php echo '</br>' ?>
+<input type="checkbox" name="dostawa" value="$r['15']" /> Odbior osobisty <?php echo '</br>' ?>
 <?php
-echo $getTotal;
+echo '<button name="kup" type="button">Oblicz</button>'.'</br>';
+echo $getTotal.'</br>';
+echo "CENA: ".$cena_ostateczna;
 ?>
 
 <div class="kup">

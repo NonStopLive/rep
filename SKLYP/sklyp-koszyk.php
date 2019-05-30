@@ -16,7 +16,7 @@ if(isset($_GET['remove'])) {
 <div class="baner">
 
 <img src="logo.png">
-<br>
+<br >
 <img src="logo2.png">
 
 </div>

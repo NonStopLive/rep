@@ -26,7 +26,7 @@ if(isset($_POST['kup'])) {
 
 </div>
 <div class="karton">
-	<div class="produkty">
+	<div class="produkty"> 
 	<div class="produkt" style="padding: 0;">
 
 <?php 
