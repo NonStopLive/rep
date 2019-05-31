@@ -73,7 +73,6 @@ $cena_ostateczna = $getTotal + $dostawa;
 <input type="checkbox" name="dostawa" value="$r['15']" /> Odbior osobisty <?php echo '</br>' ?>
 <?php
 echo '<button name="kup" type="button">Oblicz</button>'.'</br>';
-echo $getTotal.'</br>';
 echo "CENA: ".$cena_ostateczna;
 ?>
 
